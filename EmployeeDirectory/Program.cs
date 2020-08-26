@@ -11,6 +11,13 @@ namespace EmployeeDirectory
 
             SeedData();
 
+            Console.WriteLine("Add a new Employee, Quit with Q");
+
+            do
+            {
+                string name = Util.AskForString("Name: ");
+            } while (true);
+
             Employee[] employees = payroll.GetEmployees();
 
             foreach (Employee employee in employees)
