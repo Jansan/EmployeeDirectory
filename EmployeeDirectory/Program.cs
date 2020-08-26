@@ -16,7 +16,7 @@ namespace EmployeeDirectory
             foreach (Employee employee in employees)
             {
                 Console.WriteLine(employee);
-                Console.WriteLine($"Name: {employee.Name} Salary: {employee.Salary}");
+                
             }
         }
 

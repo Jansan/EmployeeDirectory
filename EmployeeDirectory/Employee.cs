@@ -10,6 +10,11 @@
             Name = name;
             Salary = salary;
         }
+
+        public override string ToString()
+        {
+            return $"Name: {Name} Salary: {Salary}";
+        }
         //private string name;
         //private double salary;
 
@@ -39,6 +44,6 @@
         //}
 
         // AddEmployee method
-        
+
     }
 }
