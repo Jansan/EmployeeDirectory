@@ -4,9 +4,24 @@ namespace EmployeeDirectory
 {
     internal static class Util
     {
-        internal static string AskForString(string v)
+        internal static string AskForString(string prompt)
         {
-            throw new NotImplementedException();
+            
+            bool success = false;
+            string answer;
+            do
+            {
+                Console.WriteLine(prompt);
+                answer = Console.ReadLine();
+
+                if (!string.IsNullOrEmpty(answer))
+                {
+                    success = true;
+                }
+
+            } while (!success);
+
+            return answer;
         }
     }
 }
