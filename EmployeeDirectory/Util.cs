@@ -23,5 +23,21 @@ namespace EmployeeDirectory
 
             return answer;
         }
+
+        internal static double AskForDouble(string prompt)
+        {
+            bool success = false;
+            double answer;
+            do
+            {
+                string input = AskForString(prompt);
+
+                success = double.TryParse(input, out answer);
+                if (!success) Console.WriteLine("Wrong format");
+                 
+            } while (!success);
+
+            return answer;
+        }
     }
 }

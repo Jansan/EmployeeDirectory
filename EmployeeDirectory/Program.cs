@@ -16,6 +16,9 @@ namespace EmployeeDirectory
             do
             {
                 string name = Util.AskForString("Name: ");
+                if (name == "Q") break;
+                double salary = Util.AskForDouble("Salary: ");
+               
             } while (true);
 
             Employee[] employees = payroll.GetEmployees();
