@@ -5,6 +5,21 @@
         public string Name { get; set; }
         public double Salary { get; set; }
 
+        public SalaryLevel SalaryLevel
+        {
+            get
+            {
+                if (Salary < 15000)
+                {
+                    return SalaryLevel.Junior;
+                }
+                else
+                {
+                    return SalaryLevel.Senior;
+                }
+            }
+        }
+
         public Employee(string name, double salary)
         {
             Name = name;
