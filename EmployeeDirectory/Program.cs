@@ -4,15 +4,17 @@ namespace EmployeeDirectory
 {
     class Program
     {
+        //Create a new instance of payroll
         static Payroll payroll = new Payroll();
         static void Main(string[] args)
         {
             
-
+            //Calls Add method on payroll instance
+            //Only for demo purpose to have some data
             SeedData();
 
 
-            do
+            do //Loop
             {
                 PrintMeny();
                
@@ -36,6 +38,7 @@ namespace EmployeeDirectory
                     Print();
                     break;
                 case "Q":
+                    //Exit application
                     Environment.Exit(0);
                     break;
                 default:
@@ -45,12 +48,17 @@ namespace EmployeeDirectory
 
         private static void Print()
         {
+            //Get a copy of the payroll
             Employee[] employees = payroll.GetEmployees();
 
+            //Loop on all employees in payroll
             foreach (Employee employee in employees)
             {
+                //Console.WriteLine() method does a .ToString() on the Employee instance
                 Console.WriteLine(employee);
 
+                //Ternary conditional operator
+                //Same as if else
                 Console.WriteLine(employee.SalaryLevel.Equals(SalaryLevel.Junior) ? 
                     DoJuniorWork() : 
                     DoSeniorWork());
@@ -75,11 +83,11 @@ namespace EmployeeDirectory
             do
             {
                 string name = Util.AskForString("Name: ");
-                if (name == "Q") break;
+                if (name == "Q") break; //Break exits the loop
                 double salary = Util.AskForDouble("Salary: ");
                 payroll.AddEmployee(name, salary);
 
-            } while (true);
+            } while (true); //Endless loop
         }
 
 

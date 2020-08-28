@@ -2,9 +2,12 @@
 {
     public class Employee
     {
+        //Property
+        //prop snippet
         public string Name { get; set; }
         public double Salary { get; set; }
 
+        //Property only get!
         public SalaryLevel SalaryLevel
         {
             get
@@ -20,44 +23,20 @@
             }
         }
 
+        //Constructor
+        //Constructor requires name and salary, removes the empty contructor
+        //ctor snippet
         public Employee(string name, double salary)
         {
             Name = name;
             Salary = salary;
         }
 
+        //This method runs when you call ToString() on a employee instance
         public override string ToString()
         {
             return $"Name: {Name} Salary: {Salary}";
         }
-        //private string name;
-        //private double salary;
-
-        //  public string Name { get; set; }
-
-        //private string name;
-
-        //public string Name
-        //{
-        //    get { return name; }
-        //    set { name = value; }
-        //}
-
-        //public Employee(string name, double salary)
-        //{
-        //    this.name = name;
-        //    this.salary = salary;
-        //}
-
-        //public void setName(string name)
-        //{
-        //    this.name = name;
-        //}
-        //public string GetName()
-        //{
-        //    return name;
-        //}
-
         
 
     }
